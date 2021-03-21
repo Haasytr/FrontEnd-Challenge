@@ -5,6 +5,10 @@ export const Container = styled.div`
   flex-direction: row;
   padding: 50px;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    }
 `;
 
 export const Filter = styled.div`
@@ -12,6 +16,10 @@ export const Filter = styled.div`
   max-width: 25%;
   padding: 30px;
   max-height: 500px;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+    }
 
   .title {
     color: #fff;

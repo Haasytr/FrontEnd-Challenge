@@ -14,6 +14,12 @@ export const Idea = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-around;
+  flex-direction: row;
+    
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+
 `;
 
 export const Description = styled.div`
@@ -21,17 +27,26 @@ export const Description = styled.div`
   display: flex;
   flex-direction: column;
 
+  @media (max-width: 768px) {
+      max-width: 80%;
+      align-items: center;
+      text-align: center;
+    }
+
   .title {
     font-size: 33px;
     margin: 30px 0;
+
+   
   }
   .text{
     font-size: 17px;
     margin: 15px 0;
     text-align: left;
-  }
 
-  .text {
+    @media (max-width: 768px) {
+      text-align: center;
+    }
 
   }
 `;

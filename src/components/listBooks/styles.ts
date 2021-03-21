@@ -15,6 +15,12 @@ export const Books = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 25%);
 
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 50%);
+
+    }
+
+
     .book {
     display: flex;
     align-items: center;

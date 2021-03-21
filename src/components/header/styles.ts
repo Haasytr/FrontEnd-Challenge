@@ -10,10 +10,24 @@ export const Container = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+    z-index: 99;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export const Nav = styled.nav`
-
+    @media (max-width: 700px) {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      margin-top: 15px;
+    }
+    
 `;
 
 export const Link = styled.a`
@@ -21,4 +35,8 @@ export const Link = styled.a`
   padding: 30px;
   font-size: 22px;
   text-decoration: none;
+
+  @media (max-width: 700px) {
+    padding: 0px;
+  }
 `;

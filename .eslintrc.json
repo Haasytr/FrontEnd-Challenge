@@ -36,6 +36,7 @@
         "import/prefer-default-export": "off",
         "import/no-duplicates": "off",
         "arrow-parens": "off",
-        "arrow-body-style":"off"
+        "arrow-body-style":"off",
+        "jsx-a11y/accessible-emoji": "off"
     }
 }
