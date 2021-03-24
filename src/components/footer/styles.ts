@@ -53,7 +53,7 @@ export const Social = styled.div`
 
 export const MeetUp = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 20%);
+  grid-template-columns: repeat(5, 20%);
   background:  #010101;
 
   @media (max-width: 768px) {

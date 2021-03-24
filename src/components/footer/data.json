@@ -1,0 +1,27 @@
+[
+  {
+    "country": "Alameda Santos, 1970",
+    "street": "6th floor - Jardim Paulista São Paulo",
+    "contact": "SP +55 11 3090 8500"
+  },
+  {
+    "country": "London - UK",
+    "street": "UK 125 Kingsway",
+    "contact": "London WC2B 6NH"
+  },
+  {
+    "country": "Buenos Aires – Argentina",
+    "street": "Esmeralda 950",
+    "contact": "Buenos Aires B C1007"
+  },
+  {
+    "country": "ALisbon - Portugal",
+    "street": "Rua Rodrigues Faria, 103",
+    "contact": "4th floor Lisbon - Portugal"
+  },
+  {
+    "country": "Curitiba – PR",
+    "street": "R. Francisco Rocha, 198",
+    "contact": "Batel – Curitiba – PR"
+  }
+]

@@ -88,7 +88,7 @@ const Home: React.FC = () => (
       Donec rutrum sed sem quis venenatis.
     </p>
 
-    <ListBooks />
+    <ListBooks filter="João" />
   </Container>
 );
 

@@ -15,7 +15,7 @@ export const Filter = styled.div`
   background: #FCDB00;
   max-width: 25%;
   padding: 30px;
-  max-height: 500px;
+  max-height: 200px;
 
   @media (max-width: 768px) {
     max-width: 100%;

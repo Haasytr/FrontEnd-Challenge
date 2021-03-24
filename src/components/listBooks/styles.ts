@@ -28,3 +28,8 @@ export const Books = styled.div`
     margin: 30px 0;
   }
 `;
+
+export const Image = styled.div`
+  display: flex;
+  justify-content: center;
+`;

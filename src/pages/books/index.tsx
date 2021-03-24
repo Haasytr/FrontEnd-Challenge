@@ -1,32 +1,29 @@
-import React from 'react';
+import React, { useState, useCallback } from 'react';
 
 import { Container, Filter } from './styles';
 
 import ListBooks from '../../components/listBooks';
 
 const Books: React.FC = () => {
+  const [filter, setFilter] = useState('wimpy kid');
+
+  const handleFormSubmit = useCallback((e) => {
+    e.preventDefault();
+    setFilter(e.currentTarget.title.value);
+  }, []);
+
   return (
     <Container>
       <Filter>
         <h1 className="title">Filter</h1>
-        <form>
-          <input type="text" placeholder="Palavra-passe" />
+        <form onSubmit={handleFormSubmit}>
+          <input type="text" placeholder="Titulo" name="title" />
 
-          <input type="text" placeholder="Titulo" />
-
-          <input type="text" placeholder="Categoria" />
-
-          <input type="text" placeholder="Ano" />
-
-          <input type="text" placeholder="Autor" />
-
-          <input type="text" placeholder="Categoria" />
-
-          <button type="button">Submit</button>
+          <button type="submit">Submit</button>
         </form>
       </Filter>
 
-      <ListBooks />
+      <ListBooks filter={filter} />
     </Container>
   );
 };

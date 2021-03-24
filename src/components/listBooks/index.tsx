@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { Modal } from 'react-bootstrap';
 
-import { Container, Books } from './styles';
+import { Container, Books, Image } from './styles';
 
 import api from '../../services/api';
 
@@ -26,7 +26,11 @@ interface BookDetail {
   }
 }
 
-const ListBooks: React.FC = () => {
+interface Props {
+  filter: string;
+}
+
+const ListBooks: React.FC<Props> = ({ filter }) => {
   const [books, setBooks] = useState<BooksDetail[]>();
   const [show, setShow] = useState(false);
   const [bookDetail, setBook] = useState<BookDetail>();
@@ -40,12 +44,12 @@ const ListBooks: React.FC = () => {
 
   useEffect(() => {
     async function loadBooks(): Promise<void> {
-      api.get('volumes?q=DIARY%10OF%10A%10WIMPY%10KID').then(response => {
+      api.get(`volumes?q=${filter}`).then(response => {
         setBooks(response.data.items);
       });
     }
     loadBooks();
-  }, []);
+  }, [filter]);
 
   return (
     <Container>
@@ -64,9 +68,11 @@ const ListBooks: React.FC = () => {
           <Modal.Title>{bookDetail?.volumeInfo.title}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <img src={bookDetail?.volumeInfo.imageLinks.thumbnail} alt="Capa" />
+          <Image>
+            <img src={bookDetail?.volumeInfo.imageLinks.thumbnail} alt="Capa" />
+          </Image>
           <p className="text">{bookDetail?.volumeInfo.description}</p>
-          <span>{bookDetail?.volumeInfo.publishedDate}</span>
+          <span>{bookDetail?.volumeInfo.publishedDate ? bookDetail?.volumeInfo.publishedDate.substring(0, 4) : ''}</span>
         </Modal.Body>
       </Modal>
     </Container>

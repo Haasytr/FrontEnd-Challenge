@@ -4,6 +4,8 @@ import {
   Container, Contact, Social, MeetUp, Item,
 } from './styles';
 
+import addresses from './data.json';
+
 import FacebookLogo from '../../assets/social/facebook-color.svg';
 import GoogleLogo from '../../assets/social/google-color.svg';
 import TwitterLogo from '../../assets/social/twitter-color.svg';
@@ -38,35 +40,13 @@ const Footer: React.FC = () => {
         </Social>
       </Contact>
       <MeetUp id="#address">
-        <Item>
-          <li>Alameda Santos, 1970</li>
-          <li>6th floor - Jardim Paulista São Paulo</li>
-          <li>SP +55 11 3090 8500</li>
-        </Item>
-
-        <Item>
-          <li>London - UK </li>
-          <li>UK 125 Kingsway</li>
-          <li>London WC2B 6NH</li>
-        </Item>
-
-        <Item>
-          <li>Buenos Aires – Argentina</li>
-          <li>Esmeralda 950</li>
-          <li>Buenos Aires B C1007</li>
-        </Item>
-
-        <Item>
-          <li>ALisbon - Portugal</li>
-          <li>Rua Rodrigues Faria, 103</li>
-          <li>4th floor Lisbon - Portugal</li>
-        </Item>
-
-        <Item>
-          <li>Curitiba – PR</li>
-          <li>R. Francisco Rocha, 198</li>
-          <li>Batel – Curitiba – PR</li>
-        </Item>
+        {addresses.map(address => (
+          <Item>
+            <li>{address.country}</li>
+            <li>{address.street}</li>
+            <li>{address.contact}</li>
+          </Item>
+        ))}
       </MeetUp>
     </Container>
   );
