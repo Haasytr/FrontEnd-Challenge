@@ -19,6 +19,7 @@ const Header: React.FC = () => {
       left: 0,
       behavior: 'smooth',
     });
+    setVisible(false);
   }, []);
 
   return (

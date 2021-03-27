@@ -39,6 +39,6 @@
         "arrow-body-style":"off",
         "jsx-a11y/accessible-emoji": "off",
         "no-unused-vars": "off",
-        "no-undef": "off",
+        "no-undef": "off"
     }
 }
